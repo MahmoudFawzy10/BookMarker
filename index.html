@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookmark</title>
+
+  <!-- Tab Icon -->
+  <link rel="icon" href="imgs/bookmark1.png" />
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/bookmark.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- SVG Gradient Definition -->
+  <svg width="0" height="0">
+    <defs>
+      <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#3ca55c" />
+        <stop offset="100%" stop-color="#b5ac49" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ========== Start Bookmark ========== -->
+  <div class="bookmark py-5 position-relative">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+      <h1 class="main-title py-2 position-relative text-center">Bookmarker</h1>
+
+      <div class="bookMark-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+        <h2>
+          <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path fill="url(#grad)" d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 
+              345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 
+              24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 
+              0 0 21.5 0 48z" />
+          </svg>
+          <span class="gradient-text">Bookmark your favorite sites</span>
+          <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path fill="url(#grad)" d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 
+              345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 
+              24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 
+              0 0 21.5 0 48z" />
+          </svg>
+        </h2>
+
+        <div class="site-name w-100 d-flex flex-column justify-content-center">
+          <label for="bookmarkName" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+          <input type="text" placeholder="Bookmark Name" class="form-control" id="bookmarkName" />
+        </div>
+
+        <div class="site-url w-100 d-flex flex-column justify-content-center">
+          <label for="bookmarkURL" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+          <input type="url" placeholder="Website URL" class="form-control" id="bookmarkURL" />
+        </div>
+
+        <button class="btn btn-submit px-5" id="submitBtn">Submit</button>
+      </div>
+
+      <table class="table mt-4 text-center bg-light">
+        <thead>
+          <tr>
+            <th class="text-capitalize">Index</th>
+            <th class="text-capitalize">Website Name</th>
+            <th class="text-capitalize">Visit</th>
+            <th class="text-capitalize">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableContent">
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- ========== End Bookmark ========== -->
+<div
+      class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+      <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+        <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+          <div class="circles d-flex">
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+          </div>
+          <button class="btn border-0" id="closeBtn">
+            <i class="fa-solid fa-xmark close fs-3"></i>
+          </button>
+        </header>
+        <p class="m-0 pb-2">
+          Site Name or Url is not valid, Please follow the rules below :
+        </p>
+        <ul class="rules list-unstyled m-0">
+          <li>
+            <i class="fa-regular fa-circle-right p-2"></i>Site name must
+            contain at least 3 characters
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+            valid one
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+  <!-- Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
